@@ -31,3 +31,103 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a,
+a:visited {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+}
+
+.nav {
+  width: 500px;
+  margin: 20px auto;
+  max-width: 48em;
+  border: 1px solid #333;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
+
+.menu {
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: background .15s ease-in;
+}
+
+.menu:hover {
+  background: #ddd;
+}
+
+/*
+.menu.is-active {
+  background: #ddd;
+}
+*/
+
+.merah.is-active {
+  background: rgb(240, 0, 0);
+}
+
+.merah.selected {
+  background: rgb(240, 0, 0);
+}
+
+.kuning.is-active {
+  background: rgb(255, 217, 0);
+}
+
+.kuning.selected {
+  background: rgb(255, 217, 0);
+}
+
+.hijau.is-active {
+  background: rgb(21, 255, 0);
+}
+
+.hijau.selected {
+  background: rgb(21, 255, 0);
+}
+
+.biru.is-active {
+  background: rgb(0, 102, 255);
+}
+
+.biru.selected {
+  background: rgb(0, 102, 255);
+}
+
+.info {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.selected {
+  margin-left: 5px;
+  padding: 5px 10px;
+  vertical-align: middle;
+  border-radius: 4px;
+  background: #ddd;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.5em;
+}
