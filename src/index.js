@@ -2,26 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import * as serviceWorker from './serviceWorker';
 
 
 const items = [
     {
-        color   :'Merah',
+        color   :'merah',
         img     : 'apple.jpg',
         title   :'Apel',
     },
     {
-        color   :'Kuning',
+        color   :'kuning',
         img     :'nanas.jpg',
         title   :'Nanas',
     },
     {
-        color   :'Hijau',
+        color   :'hijau',
         img     :'alpukat.jpg',
         title   :'Alpukat',
     },
     {
-        color   :'Biru',
+        color   :'biru',
         img     :'berry.jpg',
         title   :'Blueberry',
     },
@@ -30,3 +31,4 @@ const items = [
 ReactDOM.render(<App items={items} />, 
     document.getElementById('root'));
 
+serviceWorker.register();
