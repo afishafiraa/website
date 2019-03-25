@@ -16,6 +16,11 @@
       "src":"love128.png",
       "type":"image/png",
       "sizes":"128x128"
+    },
+    {
+      "src":"love144.png",
+      "type":"image/png",
+      "sizes":"144x144"
     }
   ],
   "start_url": "index.html",
