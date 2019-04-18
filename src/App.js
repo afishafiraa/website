@@ -22,6 +22,42 @@ class App extends Component {
       title : menu.title,
     });
   }
+
+  hitung(title){
+    if(title == "Calculator"){
+      //display calculator
+      return (
+        <div className="info">
+          <span className={"selected " + this.state.color}>{this.state.title}</span>
+          <br/>
+          <br/>
+          <form>
+            <input id ='angka1' type='number'></input>
+            +
+            <input id = 'angka2' type='number'></input>
+            =
+          </form>
+        
+          <span></span>
+          <br/>
+          <button>Hitung</button>
+
+        </div>
+      );
+    } else{
+       //display default
+      return (
+      <div className ="info">
+        ini adalah <span className={"selected " + this.state.color}> {this.state.title}</span>
+        <br/> 
+        <br/>
+
+        <img src={this.state.img} width="200"></img>
+      </div>
+      );
+    }
+    //console.log(title);
+  }
   /* gambarku(){
     var gambar;
     if (this.state.active.toLocaleLowerCase()==='merah'){
@@ -67,16 +103,9 @@ class App extends Component {
       </nav>
 
         <div className="info">
-          ini adalah <span className={"selected " + this.state.color}> {this.state.title}</span>
-          <br/> 
-          <br/>
-
-          <img src={this.state.img} width="200"></img>
-          {/*this.gambarku()}
-          */}
-
+          {this.hitung(this.state.title)}
         </div>
-        
+      
       </div>
     );
   }

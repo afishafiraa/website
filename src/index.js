@@ -26,6 +26,11 @@ const items = [
         img     :'berry.jpg',
         title   :'Blueberry',
     },
+    {
+        color   : 'grey',
+        img     : null,
+        title   : 'Calculator'
+    }
 ];
 
 ReactDOM.render(<App items={items} />, 

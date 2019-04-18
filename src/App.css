@@ -116,6 +116,14 @@ a:hover {
   background: rgb(0, 102, 255);
 }
 
+.grey.is-active {
+  background: rgb(70, 70, 70);
+}
+
+.grey.selected {
+  background: rgb(70, 70, 70);
+}
+
 .info {
   margin-top: 40px;
   text-align: center;
