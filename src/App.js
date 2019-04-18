@@ -39,8 +39,7 @@ class App extends Component {
             <input name ="angka2" type="number" value ={this.state.angka2} onChange={this.changeHandler.bind(this)}></input>
             =
             <span>{parseInt(this.state.angka1) + parseInt(this.state.angka2)} </span>
-          </form>
-        
+          </form>       
           <span></span>
           <br/>
           <button>Hitung</button>
