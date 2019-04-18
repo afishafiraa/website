@@ -10,6 +10,8 @@ class App extends Component {
       color: 'merah',
       img   : 'apple.jpg',
       title : 'Apel',
+      angka1 : 0,
+      angka2 : 0
     };
   }
 
@@ -32,10 +34,11 @@ class App extends Component {
           <br/>
           <br/>
           <form>
-            <input id ='angka1' type='number'></input>
+            <input name ="angka1" type="number" value={this.state.angka1} onChange={this.changeHandler.bind(this)}></input>
             +
-            <input id = 'angka2' type='number'></input>
+            <input name ="angka2" type="number" value ={this.state.angka2} onChange={this.changeHandler.bind(this)}></input>
             =
+            <span>{parseInt(this.state.angka1) + parseInt(this.state.angka2)} </span>
           </form>
         
           <span></span>
@@ -56,8 +59,14 @@ class App extends Component {
       </div>
       );
     }
-    //console.log(title);
   }
+    changeHandler(event){
+      this.setState({
+        [event.target.name]:event.target.value,
+      });
+    }
+
+    //console.log(title);
   /* gambarku(){
     var gambar;
     if (this.state.active.toLocaleLowerCase()==='merah'){
