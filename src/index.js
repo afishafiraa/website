@@ -28,8 +28,13 @@ const items = [
     },
     {
         color   : 'grey',
-        img     : null,
+        img     : '',
         title   : 'Calculator'
+    },
+    {
+        color   : 'orange',
+        img     : '',
+        title   : "Profile"
     }
 ];
 

@@ -56,7 +56,6 @@ a:hover {
 }
 
 .nav {
-  width: 500px;
   margin: 20px auto;
   max-width: 48em;
   border: 1px solid #333;
@@ -117,13 +116,20 @@ a:hover {
 }
 
 .grey.is-active {
-  background: rgb(70, 70, 70);
+  background: rgb(138, 138, 138);
 }
 
 .grey.selected {
-  background: rgb(70, 70, 70);
+  background: rgb(138, 138, 138);
 }
 
+.orange.is-active {
+  background: rgb(255, 217, 0);
+}
+
+.orange.selected {
+  background: rgb(255, 217, 0);
+}
 .info {
   margin-top: 40px;
   text-align: center;

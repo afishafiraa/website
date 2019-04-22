@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Profile from './Profile.js';
 
 class App extends Component {
   constructor(props){
@@ -24,6 +25,14 @@ class App extends Component {
       title : menu.title,
     });
   }
+  calc(){
+    switch(this.state.operation){
+      case 'plus' : return parseInt(this.state.angka1) + parseInt(this.state.angka2);
+      case 'minus' : return parseInt(this.state.angka1) - parseInt(this.state.angka2);
+      case 'kali' : return parseInt(this.state.angka1) * parseInt(this.state.angka2);
+      case 'div' : return parseInt(this.state.angka1) / parseInt(this.state.angka2);
+    }
+  }
 
   hitung(title){
     if(title == "Calculator"){
@@ -35,16 +44,23 @@ class App extends Component {
           <br/>
           <form>
             <input name ="angka1" type="number" value={this.state.angka1} onChange={this.changeHandler.bind(this)}></input>
-            +
+            <select name="operation" onChange={this.changeHandler.bind(this)}>
+              <option value="plus">+</option>
+              <option value="minus">-</option>
+              <option value="kali">x</option>
+              <option value="div">:</option>
+            </select>
             <input name ="angka2" type="number" value ={this.state.angka2} onChange={this.changeHandler.bind(this)}></input>
-            =
-            <span>{parseInt(this.state.angka1) + parseInt(this.state.angka2)} </span>
+             =
+            <span> {this.calc()}</span>
           </form>       
           <span></span>
           <br/>
-          <button>Hitung</button>
-
         </div>
+      );
+    }else if(title =="Profile"){
+      return (
+        <Profile/>
       );
     } else{
        //display default
