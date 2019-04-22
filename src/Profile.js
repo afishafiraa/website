@@ -6,18 +6,22 @@ class Profile extends Component {
     super(props);
 
     this.state = {
-      color: 'merah',
-      img   : 'apple.jpg',
-      title : 'Apel',
-      angka1 : 0,
-      angka2 : 0
+      color: 'orange',
+      img   : '',
+      title : 'Profile'
     };
   }
 
   
   render() {
     return (
-        <img src="koala.jpg"></img>
+        <div className ="info">
+        ini adalah <span className={"selected " + this.state.color}> {this.state.title}</span>
+        <br/> 
+        <br/>
+
+        <img src="koala.jpg" width="40%"></img>
+      </div>
     );
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Profile from './Profile.js';
+import Calculator from './Calculator.js';
 
 class App extends Component {
   constructor(props){
@@ -25,44 +26,18 @@ class App extends Component {
       title : menu.title,
     });
   }
-  calc(){
-    switch(this.state.operation){
-      case 'plus' : return parseInt(this.state.angka1) + parseInt(this.state.angka2);
-      case 'minus' : return parseInt(this.state.angka1) - parseInt(this.state.angka2);
-      case 'kali' : return parseInt(this.state.angka1) * parseInt(this.state.angka2);
-      case 'div' : return parseInt(this.state.angka1) / parseInt(this.state.angka2);
-    }
-  }
 
   hitung(title){
     if(title == "Calculator"){
       //display calculator
       return (
-        <div className="info">
-          <span className={"selected " + this.state.color}>{this.state.title}</span>
-          <br/>
-          <br/>
-          <form>
-            <input name ="angka1" type="number" value={this.state.angka1} onChange={this.changeHandler.bind(this)}></input>
-            <select name="operation" onChange={this.changeHandler.bind(this)}>
-              <option value="plus">+</option>
-              <option value="minus">-</option>
-              <option value="kali">x</option>
-              <option value="div">:</option>
-            </select>
-            <input name ="angka2" type="number" value ={this.state.angka2} onChange={this.changeHandler.bind(this)}></input>
-             =
-            <span> {this.calc()}</span>
-          </form>       
-          <span></span>
-          <br/>
-        </div>
+        <Calculator/>
       );
     }else if(title =="Profile"){
       return (
         <Profile/>
       );
-    } else{
+    }else{
        //display default
       return (
       <div className ="info">
@@ -75,12 +50,6 @@ class App extends Component {
       );
     }
   }
-    changeHandler(event){
-      this.setState({
-        [event.target.name]:event.target.value,
-      });
-    }
-
     //console.log(title);
   /* gambarku(){
     var gambar;
