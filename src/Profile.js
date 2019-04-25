@@ -16,11 +16,13 @@ class Profile extends Component {
   render() {
     return (
         <div className ="info">
-        ini adalah <span className={"selected " + this.state.color}> {this.state.title}</span>
-        <br/> 
-        <br/>
+          ini adalah <span className={"selected " + this.state.color}> {this.state.title}</span>
+          <br/> 
+          <br/>
 
-        <img src="koala.jpg" width="40%"></img>
+          <p>{this.props.nama}</p>
+          <br/>
+          <img src="koala.jpg" width="40%"></img>
       </div>
     );
   }

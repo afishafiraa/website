@@ -35,7 +35,7 @@ class App extends Component {
       );
     }else if(title =="Profile"){
       return (
-        <Profile/>
+        <Profile nama="Koala nya lucu ya ^^"/>
       );
     }else{
        //display default
