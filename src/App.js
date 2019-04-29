@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Profile from './Profile.js';
 import Calculator from './Calculator.js';
+import toast from 'toasted-notes' 
+import 'toasted-notes/src/styles.css';
 
 class App extends Component {
   constructor(props){
